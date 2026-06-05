@@ -1,0 +1,86 @@
+<div class="page active" id="page-home">
+
+  <div class="page-header">
+    <div class="header-left">
+      <div class="menu-trigger" onclick="toggleSidebar()">☰</div>
+      <h1 class="page-title">Hi, <span id="dashboard-welcome-name">Neighbor #23</span></h1>
+    </div>
+    <div id="solar-status-widget" class="solar-widget">
+      <span class="solar-icon">☀️</span>
+      <span id="solar-status-text">Solar 85%</span>
+    </div>
+  </div>
+
+  <!-- Anomaly Alert (Only shown when active) -->
+  <div id="home-anomaly-alert"></div>
+
+  <!-- Bill Card -->
+  <div class="card">
+    <div class="card-label">Estimated bill this month</div>
+    <div class="card-value" id="bill-amount">RM 127.40</div>
+    <div class="card-sub positive" id="bill-comparison">+RM 8.20 vs same week last month</div>
+  </div>
+
+  <!-- Tier Bar Card -->
+  <div class="card" id="tier-card-container">
+    <div class="tier-header">
+      <span class="tier-title">TNB tariff this cycle</span>
+      <span class="tier-reset">Resets in 8 days</span>
+    </div>
+    <div class="tier-sub">
+      <span class="tier-kwh" id="tier-kwh">287 / 300 kWh</span>
+      <span class="tier-warning-text" id="tier-warning-text">13 kWh until +53%</span>
+    </div>
+    <div class="tier-track">
+      <div class="tier-fill" id="tier-fill" style="width: 95.7%;
+        background: linear-gradient(90deg, #1D9E75 0%, #F6AD55 70%, #E53E3E 100%);"></div>
+    </div>
+    <div class="tier-alert" id="tier-alert">
+      ⚠️ <strong>Tariff jump imminent!</strong>
+      Only <span id="alert-remaining">13</span> kWh before your rate surges 53%.
+      Reduce AC by 2 hours/day this week.
+    </div>
+  </div>
+
+  <!-- Chart Card -->
+  <div class="card">
+    <div class="chart-header">
+      <span class="chart-title">Real-time usage</span>
+      <span class="chart-unit">Watts</span>
+    </div>
+    <div class="chart-wrap">
+      <canvas id="usageChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Live Sensor Card -->
+  <div class="sensor-card">
+    <div class="sensor-dot"></div>
+    <div>
+      <div class="sensor-label">Live sensor (SCT-013)</div>
+      <div>
+        <span class="sensor-value" id="live-power">47.3</span>
+        <span class="sensor-unit">W real-time</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standby Waste Card -->
+  <div class="card standby-card" id="standby-card-container">
+    <div class="standby-header">
+      <div class="standby-icon-box">🔌</div>
+      <div class="standby-info">
+        <div class="standby-title">Standby Power Estimate</div>
+        <div class="standby-sub" id="standby-text">Midnight baseline: <strong>145.9W</strong></div>
+      </div>
+      <div class="standby-cost-box">
+        <div class="standby-cost-val" id="standby-cost">RM 31.51</div>
+        <div class="standby-cost-label">/ month</div>
+      </div>
+    </div>
+    <div class="standby-tip">
+        🎯 Tip: Unplugging idle devices can save you up to 12% on your bill.
+    </div>
+  </div>
+
+</div>

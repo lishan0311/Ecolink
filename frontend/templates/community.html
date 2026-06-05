@@ -1,0 +1,77 @@
+<div class="page" id="page-community">
+
+  <div class="page-header">
+    <div class="header-left">
+        <div class="menu-trigger" onclick="toggleSidebar()">☰</div>
+        <h1 class="page-title">Community</h1>
+    </div>
+  </div>
+
+  <!-- Community Hero -->
+  <div class="community-hero">
+    <div class="community-hero-icon">⚡</div>
+    <div>
+      <div class="community-hero-label">Community Saving · June 2026</div>
+      <div class="community-hero-amount" id="comm-total-rm">RM 1,247</div>
+      <div class="community-hero-sub">
+        <span id="comm-total-co2">423</span> kg CO₂ avoided · <span id="comm-households">15</span> households
+      </div>
+    </div>
+  </div>
+
+  <div class="challenge-card">
+    <div class="challenge-header">
+      <div class="challenge-title">Zero-Anomaly Challenge</div>
+      <div class="challenge-badge">🔥 Target: 7 Days</div>
+    </div>
+    
+    <div class="streak-container">
+      <div class="streak-day"><span class="day-label">M</span><div class="day-circle completed">✓</div></div>
+      <div class="streak-day"><span class="day-label">T</span><div class="day-circle completed">✓</div></div>
+      <div class="streak-day"><span class="day-label">W</span><div class="day-circle current"></div></div> <div class="streak-day"><span class="day-label">T</span><div class="day-circle"></div></div>
+      <div class="streak-day"><span class="day-label">F</span><div class="day-circle"></div></div>
+      <div class="streak-day"><span class="day-label">S</span><div class="day-circle"></div></div>
+      <div class="streak-day"><span class="day-label">S</span><div class="day-circle"></div></div>
+    </div>
+    
+    <div class="challenge-footer">
+      ⏳ Today's check-in will automatically complete at 11:59 PM if no anomaly is detected.
+    </div>
+  </div>
+
+  <!-- Leaderboard -->
+  <div class="leaderboard-header">
+    <span class="leaderboard-title">Ranking</span>
+  </div>
+
+  <div id="leaderboard-container">
+    <!-- Top 5 will be injected here -->
+  </div>
+
+  <div id="user-rank-container" style="display: none;">
+    <!-- User's rank if outside Top 5 will be injected here -->
+  </div>
+
+  <button id="expand-leaderboard-btn" class="expand-btn" onclick="toggleLeaderboard()">
+    Show Full Rankings
+  </button>
+
+  <div class="leaderboard-footer">
+    <div style="color: #94A3B8; margin-top: 2px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+    </div>
+    <div>
+      Rankings based on savings % vs your own baseline - fair for all family sizes.
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+/* Community page specific overrides if needed */
+</style>
